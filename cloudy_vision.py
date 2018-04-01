@@ -34,7 +34,7 @@ def settings(name):
             'vendors' : {
                 'google' : vendors.google,
                 'msft' : vendors.microsoft,
-                #'clarifai' : vendors.clarifai_,
+                'clarifai' : vendors.clarifai_,
                 'ibm' : vendors.ibm,
                 #'cloudsight' : vendors.cloudsight_,
                 #'rekognition' : vendors.rekognition,
