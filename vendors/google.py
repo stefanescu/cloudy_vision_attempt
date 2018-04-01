@@ -71,4 +71,30 @@ def get_standardized_result(api_result):
         for annotation in api_result['logoAnnotations']:
             output['logo_tags'].append((annotation['description'], annotation['score']))
 
+    if 'faceAnnotations' in api_result:
+        output['face_emotion_tags'] = []
+        for annotation in api_result['faceAnnotations']:
+            output['face_emotion_tags'].append(("joyLikelihood", annotation['joyLikelihood']))
+            output['face_emotion_tags'].append(("sorrowLikelihood", annotation['sorrowLikelihood']))
+            output['face_emotion_tags'].append(("angerLikelihood", annotation['angerLikelihood']))
+            output['face_emotion_tags'].append(("surpriseLikelihood", annotation['surpriseLikelihood']))
+            output['face_emotion_tags'].append(("underExposedLikelihood", annotation['underExposedLikelihood']))
+            output['face_emotion_tags'].append(("blurredLikelihood", annotation['blurredLikelihood']))
+            output['face_emotion_tags'].append(("headwearLikelihood", annotation['headwearLikelihood']))
+    #
+    if 'landmarkAnnotations' in api_result:
+        output['landmark_tags'] = []
+        for annotation in api_result['landmarkAnnotations']:
+            output['landmark_tags'].append((annotation['description'], annotation['score']))
+    #
+    if 'safeSearchAnnotation' in api_result:
+        output['safeSearch_tags'] = []
+        annotation = api_result['safeSearchAnnotation']
+
+        output['safeSearch_tags'].append(('adult', annotation['adult']))
+        output['safeSearch_tags'].append(('medical', annotation['medical']))
+        output['safeSearch_tags'].append(('racy', annotation['racy']))
+        output['safeSearch_tags'].append(('spoof', annotation['spoof']))
+        output['safeSearch_tags'].append(('violence', annotation['violence']))
+
     return output

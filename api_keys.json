@@ -1,0 +1,9 @@
+{
+    "google" : "AIzaSyBVMDRcKlO3VxM42Cm9u-pPxclmvQ5c-mk",
+    "microsoft" : "856bad62c44a4b0d9ef41893a6ca4797",
+    "ibm" : "77ed8606af97ec03c30a29c55cf9f85387c1335e",
+    "cloudsight" : {
+        "api_key" : "YOUR KEY HERE",
+        "api_secret" : "YOUR SECRET HERE"
+    }
+}

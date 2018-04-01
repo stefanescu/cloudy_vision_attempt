@@ -27,7 +27,7 @@
 
         <h4>Results Summary</h4>
         <p>
-            <b>On {{ process_date.strftime('%b %d, %Y') }}, {{ num_images }} images were processed across {{ num_vendors }} vendors</b>: {{ vendor_names }}.
+            <!--<b>On {{ process_date.strftime('%b %d, %Y') }}, {{ num_images }} images were processed across {{ num_vendors }} vendors</b>: {{ vendor_names }}.-->
         </p>
         <p>
             A thumbnail of each image is displayed (click to see it fullsize) along with results from each computer vision API vendor.
@@ -87,7 +87,7 @@
                   <span class="result" style="opacity: {{ score }}">
                       {{ result[0] }}
                       {% if score is not none %}
-                      <span class="score">({{ ("%.2f" % score).lstrip('0') }})</span>
+                      <span class="score">({{ score }})</span>
                       {% endif %}
                       {% if not loop.last %}
                       ,

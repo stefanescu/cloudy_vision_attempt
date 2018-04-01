@@ -7,3 +7,4 @@ output
 *.pyc
 venv
 tags.json
+*.idea
