@@ -6,5 +6,6 @@ __pycache__
 output
 *.pyc
 venv
+env
 tags.json
 *.idea
