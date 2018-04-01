@@ -1,4 +1,4 @@
-
+cloned and slightly modified https://github.com/goberoi/cloudy_vision 
 # Cloudy Vision: compare computer vision APIs
 
 Run a corpus of images through multiple computer vision API vendors. View image labeing results side by side so that you can get a general feel for how well each vendor works for your use case. Supported vendors: Microsoft, IBM, Google, Cloudsight, Amazon (Rekognition) and Clarifai.
