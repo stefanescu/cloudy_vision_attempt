@@ -41,6 +41,9 @@ def call_vision_api(image_filename, api_keys):
               "type": "SAFE_SEARCH_DETECTION",
               "maxResults": 10
             },
+            {
+              "type": "TEXT_DETECTION"
+            },
           ]
         }
       ]
@@ -96,5 +99,10 @@ def get_standardized_result(api_result):
         output['safeSearch_tags'].append(('racy', annotation['racy']))
         output['safeSearch_tags'].append(('spoof', annotation['spoof']))
         output['safeSearch_tags'].append(('violence', annotation['violence']))
+
+    if 'textAnnotations' in api_result:
+        output['text'] = []
+        for annotation in api_result['landmarkAnnotations']:
+            output['text'].append((annotation['description'], annotation['locale']))
 
     return output
